@@ -4,9 +4,7 @@ A responsive personal movie-theatre archive built with HTML, CSS and vanilla Jav
 
 [Website URL] https://nishanthkj77.github.io/reellog-cinema/
 ## Features
-- 27 preloaded theatre experiences, including both LEO visits:
-  - Cauvery Theatre, Trichy
-  - Ram Cinemas, Perambalur
+- 27 preloaded theatre experiences
 - Search by movie, theatre, location or memory note
 - Filter by location and sort the collection
 - Grid/list view toggle
