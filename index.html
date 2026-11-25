@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090b10">
+  <meta name="description" content="A personal archive of every movie watched on the big screen, with theatres, places and memories.">
+  <title>ReelLog — My Cinema Archive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="ReelLog home"><span class="brand-icon">R<span>✦</span></span><span>reel<span class="brand-light">log</span></span></a>
+    <nav class="nav-links"><a class="active" href="#library">My library</a><a href="#insights">Insights</a><a href="#about">About</a></nav>
+    <div class="top-actions"><button class="icon-btn" id="themeToggle" title="Toggle theme" aria-label="Toggle theme">☼</button><button class="add-btn" id="openAddTop"><span>＋</span> Add movie</button></div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-content">
+        <div class="overline"><span class="live-dot"></span> YOUR PERSONAL CINEMA ARCHIVE</div>
+        <h1>Movies end.<br><span>Memories stay.</span></h1>
+        <p class="hero-description">A living collection of the stories you experienced on the big screen — every movie, every theatre, every city.</p>
+        <div class="hero-ctas"><a href="#library" class="primary-link">Explore collection <span>↘</span></a><button class="text-link" id="heroAdd">＋ Add a memory</button></div>
+        <div class="hero-proof"><div class="avatar-stack"><i>🎞</i><i>🍿</i><i>✦</i></div><span>Built from real theatre experiences</span></div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="poster-float poster-back"><span>THE</span><b>BIG<br>SCREEN</b><small>AN ONGOING STORY</small></div>
+        <div class="poster-float poster-front"><div class="poster-glow"></div><span class="poster-tag">PERSONAL ARCHIVE</span><strong>REEL<br>BY<br>REEL.</strong><small>ISSUE NO. 001 · EST. MY JOURNEY</small></div>
+        <div class="floating-chip chip-one">✦ <span>Every ticket tells a story</span></div>
+        <div class="floating-chip chip-two"><span class="chip-dot"></span> THEATRE DIARY</div>
+      </div>
+      <div class="hero-bottom-line"><span>01 / THE COLLECTION</span><span>SCROLL TO EXPLORE ↓</span></div>
+    </section>
+
+    <section class="stats-grid" id="insights">
+      <article class="stat-card stat-feature"><div class="stat-top"><span>THE ARCHIVE</span><span class="stat-icon">▤</span></div><strong id="movieCount">27</strong><p>Movie experiences</p><div class="stat-foot"><span class="tiny-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span>and counting</span></div></article>
+      <article class="stat-card"><div class="stat-top"><span>PLACES VISITED</span><span class="stat-icon">⌖</span></div><strong id="placeCount">5</strong><p>Towns &amp; cities</p><div class="stat-foot"><span class="stat-caption">Across your cinema journey</span></div></article>
+      <article class="stat-card"><div class="stat-top"><span>THEATRES</span><span class="stat-icon">▣</span></div><strong id="theatreCount">11</strong><p>Big-screen destinations</p><div class="stat-foot"><span class="stat-caption">Each with its own story</span></div></article>
+      <article class="stat-card"><div class="stat-top"><span>YOUR TIMELINE</span><span class="stat-icon">↗</span></div><strong>∞</strong><p>Memories ahead</p><div class="stat-foot"><span class="stat-caption">The next ticket is waiting</span></div></article>
+    </section>
+
+    <section class="library-section" id="library">
+      <div class="section-intro"><div><div class="overline">THE PERSONAL COLLECTION</div><h2>Your movie <span>log.</span></h2><p>Browse your theatre memories, find a favourite, or add the next one.</p></div><div class="section-side-note"><span class="side-line"></span><span>CURATED BY YOU<br>NOT BY AN ALGORITHM</span></div></div>
+      <div class="controls">
+        <label class="search-field"><span>⌕</span><input id="searchInput" type="search" placeholder="Search movies, theatres, locations..." autocomplete="off"><kbd>/</kbd></label>
+        <div class="control-right"><select id="locationFilter" aria-label="Filter by location"><option value="">All locations</option></select><select id="sortFilter" aria-label="Sort collection"><option value="recent">Recently added</option><option value="az">Title A–Z</option><option value="location">Location</option></select><div class="view-toggle"><button class="selected" id="gridView" title="Grid view">▦</button><button id="listView" title="List view">☷</button></div></div>
+      </div>
+      <div class="active-filter-row"><span id="resultCount">27 experiences</span><span class="filter-label">FILTERED BY <b id="filterName">ALL LOCATIONS</b></span></div>
+      <div id="movieGrid" class="movie-grid"></div>
+      <div id="emptyState" class="empty-state" hidden><div>⌕</div><h3>No movies found</h3><p>Try another search or clear your filters.</p><button id="clearFilters">Clear filters</button></div>
+    </section>
+
+    <section class="quote-band" id="about"><div class="quote-mark">“</div><div><p>Some movies are remembered for their stories.<br><em>Some are remembered for where we watched them.</em></p><span>— THE REELLOG JOURNAL</span></div><div class="quote-film">REEL<br><b>MEMORIES</b><span>✦ ✦ ✦</span></div></section>
+    <footer><a class="brand footer-brand" href="#"><span class="brand-icon">R<span>✦</span></span><span>reel<span class="brand-light">log</span></span></a><span>YOUR LIFE, IN MOVIE TICKETS.</span><span>MADE FOR THE LOVE OF CINEMA <b>✦</b></span></footer>
+  </main>
+
+  <dialog id="movieDialog">
+    <form id="movieForm">
+      <div class="dialog-head"><div><div class="overline">ADD TO YOUR STORY</div><h2 id="dialogTitle">Log a movie.</h2><p>Keep the details. Add the memory.</p></div><button type="button" class="dialog-close" id="closeDialog">×</button></div>
+      <input type="hidden" name="id">
+      <div class="form-grid">
+        <label class="full">Movie title <input name="title" required placeholder="e.g. Interstellar"></label>
+        <label>Location <input name="location" required placeholder="e.g. Trichy"></label>
+        <label>Theatre <input name="theatre" required placeholder="e.g. Maris LA"></label>
+        <label>Watched date <input name="date" type="date"></label>
+        <label>Your rating <select name="rating"><option value="">Not rated</option><option value="5">★★★★★ · 5</option><option value="4">★★★★☆ · 4</option><option value="3">★★★☆☆ · 3</option><option value="2">★★☆☆☆ · 2</option><option value="1">★☆☆☆☆ · 1</option></select></label>
+        <label class="full">Poster image URL <input name="poster" type="url" placeholder="Paste a direct image URL (optional)"></label>
+        <label class="full">Your memory <textarea name="note" rows="3" placeholder="Who came with you? First day show? What made it special?"></textarea></label>
+      </div>
+      <div class="dialog-foot"><span>Dates and ratings can be added later.</span><button class="save-btn" type="submit">Save to my archive <span>↗</span></button></div>
+    </form>
+  </dialog>
+  <dialog id="detailDialog" class="detail-dialog"><div id="detailContent"></div></dialog>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
