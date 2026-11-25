@@ -2,6 +2,7 @@
 
 A responsive personal movie-theatre archive built with HTML, CSS and vanilla JavaScript.
 
+[Website URL] https://nishanthkj77.github.io/reellog-cinema/
 ## Features
 - 27 preloaded theatre experiences, including both LEO visits:
   - Cauvery Theatre, Trichy
